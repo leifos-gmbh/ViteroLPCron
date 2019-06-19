@@ -1,6 +1,6 @@
 # ViteroLPCron
 Vitero  is a commercial conferencing tool.
-This plugin gives the possibility to update the learning progress of the users for the vitero sessions in ILIAS.
+This plugin gives the possibility to update the learning progress in ILIAS vitero sessions.
 
 **Minimum ILIAS Version:**
 5.3.0
