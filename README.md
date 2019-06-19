@@ -15,8 +15,7 @@ Jesús López Reyes - lopez@leifos.com
 German, English
 
 **Related Plugins:**
-Vitero
-ViteroSingleLogout
+Vitero, ViteroSingleLogout
 
 **Bug Tracker:**
 [ILIAS MantisBT](http://www.ilias.de/mantis/search.php?project_id=3&category=Vitero)
