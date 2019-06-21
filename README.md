@@ -31,7 +31,3 @@ Vitero, ViteroSingleLogout
 
 6. When ILIAS update the plugin, hit the "Action" button and select "Activate" that will appear instead of the "Update" link.
 
-7. Hit the "Action" button and select "Refresh Languages" to update the language-files.
-
-8. [WIP].
-

@@ -11,6 +11,8 @@ include_once "Services/Cron/classes/class.ilCronJob.php";
  */
 class ilViteroLearningProgressCronJob extends ilCronJob
 {
+	const VITERO_PLUGIN_NAME = 'Vitero'; // Has to be the same in class.ilViteroPlugin.php
+
 	protected $plugin; // [ilCronHookPlugin]
 
 	/**
@@ -63,6 +65,11 @@ class ilViteroLearningProgressCronJob extends ilCronJob
 
 		try
 		{
+			$plugin = $this->getParentViteroPluginObject();
+
+			//This udpate Learning Progress at the end have to update this ilLPStatus
+			$plugin->updateLearningProgressData();
+
 			$result->setStatus(ilCronJobResult::STATUS_OK);
 		}
 		catch(ilException $e)
@@ -80,6 +87,26 @@ class ilViteroLearningProgressCronJob extends ilCronJob
 	public function getPlugin()
 	{
 		return ilViteroLearningProgressPlugin::getInstance();
+	}
+
+	private function getParentViteroPluginObject()
+	{
+		include_once("./Services/Component/classes/class.ilPluginAdmin.php");
+
+		$plugins = ilPluginAdmin::getActivePluginsForSlot(IL_COMP_SERVICE, "Repository", "robj");
+
+		foreach ($plugins as $pl)
+		{
+			if($pl == self::VITERO_PLUGIN_NAME)
+			{
+				return ilPluginAdmin::getPluginObject(
+					"IL_COMP_SERVICE", "Repository",
+					"robj", $pl
+				);
+			}
+		}
+
+		return false;
 	}
 
 }

@@ -12,8 +12,6 @@ class ilViteroLearningProgressPlugin extends ilCronHookPlugin
 	const SLOT_ID = 'crnhk';
 	const CNAME = 'Cron';
 	const CTYPE = 'Services';
-	//const PLUGIN_DIR = ILIAS_ABSOLUTE_PATH."/Customizing/global/plugins/Services/Cron/CronHook/".ilViteroLearningProgressPlugin::PNAME;
-	//const BACKUP_DIR = self::PLUGIN_DIR."/backup";
 
 	function getPluginName()
 	{
