@@ -4,7 +4,7 @@
  * Vitero Learning Progress management Plugin
  * @author Jesus Lopez <lopez@leifos.de>
  */
-class ilViteroLearningProgressPlugin extends ilCronHookPlugin
+class ilViteroLPCronPlugin extends ilCronHookPlugin
 {
 	private static $instance = null;
 
@@ -35,7 +35,7 @@ class ilViteroLearningProgressPlugin extends ilCronHookPlugin
 	//has to return an array with instances of all cron jobs of the plugin
 	function getCronJobInstances()
 	{
-		$job = new ilViteroLearningProgressCronJob();
+		$job = new ilViteroLPCronJob();
 
 		return array($job);
 	}
@@ -43,7 +43,7 @@ class ilViteroLearningProgressPlugin extends ilCronHookPlugin
 	//has to return a single instance of the cron job with the given id
 	function getCronJobInstance($a_job_id)
 	{
-		$job = new ilViteroLearningProgressCronJob();
+		$job = new ilViteroLPCronJob();
 
 		return $job;
 	}

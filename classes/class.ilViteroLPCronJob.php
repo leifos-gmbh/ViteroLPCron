@@ -9,7 +9,7 @@ include_once "Services/Cron/classes/class.ilCronJob.php";
  * @author Jesús López <lopez@leifos.com>
  *
  */
-class ilViteroLearningProgressCronJob extends ilCronJob
+class ilViteroLPCronJob extends ilCronJob
 {
 	const VITERO_PLUGIN_NAME = 'Vitero'; // Has to be the same in class.ilViteroPlugin.php
 
@@ -21,17 +21,17 @@ class ilViteroLearningProgressCronJob extends ilCronJob
 	 */
 	public function getId()
 	{
-		return ilViteroLearningProgressPlugin::getInstance()->getId();
+		return ilViteroLPCronPlugin::getInstance()->getId();
 	}
 
 	public function getTitle()
 	{
-		return ilViteroLearningProgressPlugin::PNAME;
+		return ilViteroLPCronPlugin::PNAME;
 	}
 
 	public function getDescription()
 	{
-		return ilViteroLearningProgressPlugin::getInstance()->txt('cron_job_info');
+		return ilViteroLPCronPlugin::getInstance()->txt('cron_job_info');
 	}
 
 	public function getDefaultScheduleType()
@@ -82,11 +82,11 @@ class ilViteroLearningProgressCronJob extends ilCronJob
 	}
 
 	/**
-	 * @return \ilViteroLearningProgressPlugin
+	 * @return \ilViteroLPCronPlugin
 	 */
 	public function getPlugin()
 	{
-		return ilViteroLearningProgressPlugin::getInstance();
+		return ilViteroLPCronPlugin::getInstance();
 	}
 
 	private function getParentViteroPluginObject()
