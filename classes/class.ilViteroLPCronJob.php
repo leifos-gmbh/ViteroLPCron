@@ -100,7 +100,7 @@ class ilViteroLPCronJob extends ilCronJob
 			if($pl == self::VITERO_PLUGIN_NAME)
 			{
 				return ilPluginAdmin::getPluginObject(
-					"IL_COMP_SERVICE", "Repository",
+					IL_COMP_SERVICE, "Repository",
 					"robj", $pl
 				);
 			}
@@ -108,7 +108,5 @@ class ilViteroLPCronJob extends ilCronJob
 
 		return false;
 	}
-
 }
-
 ?>
