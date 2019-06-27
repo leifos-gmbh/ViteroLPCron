@@ -68,7 +68,7 @@ class ilViteroLPCronJob extends ilCronJob
 			$plugin = $this->getParentViteroPluginObject();
 
 			//This udpate Learning Progress at the end have to update this ilLPStatus
-			$plugin->updateLearningProgressData();
+			$plugin->updateLearningProgress();
 
 			$result->setStatus(ilCronJobResult::STATUS_OK);
 		}
@@ -91,7 +91,7 @@ class ilViteroLPCronJob extends ilCronJob
 
 	private function getParentViteroPluginObject()
 	{
-		include_once("./Services/Component/classes/class.ilPluginAdmin.php");
+		//include_once("./Services/Component/classes/class.ilPluginAdmin.php");
 
 		$plugins = ilPluginAdmin::getActivePluginsForSlot(IL_COMP_SERVICE, "Repository", "robj");
 
