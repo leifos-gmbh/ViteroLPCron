@@ -4,9 +4,9 @@
 include_once "Services/Cron/classes/class.ilCronJob.php";
 
 /**
- * Vitero plugint to provide Learning Progress calculations.
+ * Vitero plugin to provide Learning Progress calculations and filemanger synchronisation tasks.
  *
- * @author Jesús López <lopez@leifos.com>
+ * @author Stefan Meyer
  *
  */
 class ilViteroLPCronJob extends ilCronJob
@@ -66,10 +66,8 @@ class ilViteroLPCronJob extends ilCronJob
 		try
 		{
 			$plugin = $this->getParentViteroPluginObject();
-
-			//This udpate Learning Progress at the end have to update this ilLPStatus
 			$plugin->updateLearningProgress();
-
+            $plugin->syncFiles();
 			$result->setStatus(ilCronJobResult::STATUS_OK);
 		}
 		catch(ilException $e)

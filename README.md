@@ -3,19 +3,19 @@ Vitero  is a commercial conferencing tool.
 This plugin gives the possibility to update the learning progress in ILIAS vitero sessions.
 
 **Minimum ILIAS Version:**
-5.3.0
+6.0
 
 **Maximum ILIAS Version:**
-5.3.999
+6.99
 
 **Responsible Developer:**
-Jesús López Reyes - lopez@leifos.com
+Stefan Meyer, meyer@leifos.de
 
 **Supported Languages:**
 German, English
 
 **Related Plugins:**
-Vitero, ViteroSingleLogout
+Vitero
 
 **Bug Tracker:**
 [ILIAS MantisBT](http://www.ilias.de/mantis/search.php?project_id=3&category=Vitero)
