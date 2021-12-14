@@ -3,10 +3,10 @@ Vitero  is a commercial conferencing tool.
 This plugin gives the possibility to synchronize the learning progress and modified/deleted files assigned to vitero sessions.
 
 **Minimum ILIAS Version:**
-6.0
+7.4
 
 **Maximum ILIAS Version:**
-6.99
+7.99
 
 **Responsible Developer:**
 Stefan Meyer, meyer@leifos.de
